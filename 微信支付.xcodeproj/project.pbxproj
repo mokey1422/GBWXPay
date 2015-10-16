@@ -17,6 +17,7 @@
 		84719E661B62985A00934D9C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84719E651B62985A00934D9C /* libsqlite3.0.dylib */; };
 		84719E681B62987100934D9C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84719E671B62987100934D9C /* libz.dylib */; };
 		84719E6A1B62988000934D9C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84719E691B62988000934D9C /* SystemConfiguration.framework */; };
+		848B10C51BCA291100A76381 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848B10C41BCA291100A76381 /* CoreTelephony.framework */; };
 		84A622861B6324FD00515D33 /* GBWXPayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A622781B6324FD00515D33 /* GBWXPayManager.m */; };
 		84A622871B6324FD00515D33 /* ApiXml.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84A6227D1B6324FD00515D33 /* ApiXml.mm */; };
 		84A622881B6324FD00515D33 /* payRequsestHandler.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84A6227F1B6324FD00515D33 /* payRequsestHandler.mm */; };
@@ -51,6 +52,7 @@
 		84719E651B62985A00934D9C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		84719E671B62987100934D9C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84719E691B62988000934D9C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		848B10C41BCA291100A76381 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		84A622771B6324FD00515D33 /* GBWXPayManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBWXPayManager.h; sourceTree = "<group>"; };
 		84A622781B6324FD00515D33 /* GBWXPayManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBWXPayManager.m; sourceTree = "<group>"; };
 		84A622791B6324FD00515D33 /* GBWXPayManagerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBWXPayManagerConfig.h; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848B10C51BCA291100A76381 /* CoreTelephony.framework in Frameworks */,
 				84719E6A1B62988000934D9C /* SystemConfiguration.framework in Frameworks */,
 				84719E681B62987100934D9C /* libz.dylib in Frameworks */,
 				84A6228A1B6324FD00515D33 /* libWeChatSDK.a in Frameworks */,
@@ -90,6 +93,7 @@
 		84719E131B62971900934D9C = {
 			isa = PBXGroup;
 			children = (
+				848B10C41BCA291100A76381 /* CoreTelephony.framework */,
 				84719E691B62988000934D9C /* SystemConfiguration.framework */,
 				84719E671B62987100934D9C /* libz.dylib */,
 				84719E651B62985A00934D9C /* libsqlite3.0.dylib */,
@@ -250,6 +254,7 @@
 				TargetAttributes = {
 					84719E1B1B62971A00934D9C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4PHWH595B3;
 					};
 					84719E341B62971A00934D9C = {
 						CreatedOnToolsVersion = 6.4;
@@ -433,6 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "微信支付/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -443,6 +451,7 @@
 					"$(PROJECT_DIR)/微信支付/GBWXPay/WxPay/SDKExport",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -450,6 +459,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "微信支付/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -460,6 +472,7 @@
 					"$(PROJECT_DIR)/微信支付/GBWXPay/WxPay/SDKExport",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
