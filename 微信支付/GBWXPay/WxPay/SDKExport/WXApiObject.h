@@ -128,6 +128,7 @@ enum WXMPWebviewType {
 @end
 
 
+
 #pragma mark - SendAuthReq
 /*! @brief 第三方程序向微信终端请求认证的消息结构
  *
@@ -278,6 +279,7 @@ enum WXMPWebviewType {
 @property (nonatomic, retain) NSString* country;
 @end
 
+
 #pragma mark - OpenTempSessionReq
 /* ! @brief 第三方通知微信，打开临时会话
  *
@@ -343,6 +345,7 @@ enum WXMPWebviewType {
 
 @end
 
+
 #pragma mark - JumpToBizProfileReq
 /* ! @brief 第三方通知微信，打开指定微信号profile页面
  *
@@ -395,7 +398,10 @@ enum WXMPWebviewType {
 @property (nonatomic,retain) NSString* cardId;
 /** ext信息
  * @attention 长度不能超过2024字节
+
  * 具体见http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html#.E9.99.84.E5.BD.954-.E5.8D.A1.E5.88.B8.E6.89.A9.E5.B1.95.E5.AD.97.E6.AE.B5.E5.8F.8A.E7.AD.BE.E5.90.8D.E7.94.9F.E6.88.90.E7.AE.97.E6.B3.95 卡券扩展字段cardExt说明
+
+
  */
 @property (nonatomic,retain) NSString* extMsg;
 /**
@@ -429,6 +435,7 @@ enum WXMPWebviewType {
  */
 @property (nonatomic,retain) NSArray* cardAry;
 @end
+
 
 #pragma mark - WXMediaMessage
 
