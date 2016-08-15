@@ -59,6 +59,9 @@
 ```
  [GBWXPayManager wxpayWithOrderID:orderno orderTitle:@"测试" amount:@"0.01"];
 ```
+#更新说明：<br>
+* 更新最新的SDK避免因为IPV6的原因被拒的风险<br>
+* 账号密钥被商户改了不能给大家提供免费测试账户了，现在会报签名失败的错误，自己替换自己的账号即可。<br>
 # 看一下效果图：<br>
 ![image](https://github.com/mokey1422/gifResource/blob/master/weixinpay.gif)
 
